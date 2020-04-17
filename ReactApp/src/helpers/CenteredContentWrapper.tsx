@@ -1,8 +1,16 @@
+import React from "react";
 import styled from "styled-components";
 import { device } from "./device";
 import { spacing } from "./spacing";
 
-export const CenteredContentWrapper = styled.div`
+type props = { children: React.ReactNode; id?: string | undefined };
+export const CenteredContentWrapper = ({ children, id }: props) => (
+  <ExternalWrapper>
+    <InternalWrapper>{children}</InternalWrapper>
+  </ExternalWrapper>
+);
+
+const ExternalWrapper = styled.div`
   margin: 0 ${spacing.mobile.padding.default}px;
   max-width: 100%;
 
@@ -16,5 +24,17 @@ export const CenteredContentWrapper = styled.div`
     max-width: ${spacing.desktop.maxContentWidth}px;
     margin-left: auto;
     margin-right: auto;
+  }
+`;
+
+const InternalWrapper = styled.div`
+  position: relative;
+  @media ${device.tabletVertical} {
+    display: flex;
+    padding: 0 0 250px 0;
+
+    * {
+      text-align: left;
+    }
   }
 `;

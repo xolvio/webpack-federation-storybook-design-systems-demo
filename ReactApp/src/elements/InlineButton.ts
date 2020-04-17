@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ButtonPrimary } from "./ButtonPrimary";
-import * as colors from "./colors";
+import * as colors from "../helpers/colors";
 
 export const ButtonInline = styled(ButtonPrimary)`
   font-size: 18px;

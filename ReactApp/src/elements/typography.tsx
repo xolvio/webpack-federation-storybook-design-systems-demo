@@ -1,20 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
-import {device} from "./device";
-import {
-    TextBlack,
-    AcceptanceGreen,
-    TextMedium
-} from './colors'
+import React from "react";
+import styled from "styled-components";
+import { device } from "../helpers/device";
+import { TextBlack, AcceptanceGreen, TextMedium } from "../helpers/colors";
 
 export const maxColumnWidth = "457px";
 
 type TextProps = {
-    font?: string;
-    fontSize?: string;
-    bold?: boolean;
-    color?: string;
-    style?: React.CSSProperties;
+  font?: string;
+  fontSize?: string;
+  bold?: boolean;
+  color?: string;
+  style?: React.CSSProperties;
 };
 
 export const Header = styled.h1<TextProps>`

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AcceptanceGreen } from "./colors";
+import { AcceptanceGreen } from "../helpers/colors";
 
 export const ButtonPrimary = styled.button`
   border-radius: 2px;

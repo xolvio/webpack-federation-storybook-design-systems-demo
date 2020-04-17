@@ -1,8 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {Services} from "./components/Services";
-import {content} from "./content";
+import {Services} from "./pages/Services";
+import {content} from "./pages/content";
 
 function App() {
   return (
