@@ -25,22 +25,25 @@ module.exports = {
       {
         test: /\.tsx?$/,
         loader: require.resolve("babel-loader"),
-        options: {
-          presets: [require.resolve("@babel/preset-react")],
-        },
       },
     ],
   },
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "xolviods",
-      library: { type: "var", name: "xolviods" },
+      name: "xolvioDesignSystem",
+      library: { type: "var", name: "xolvioDesignSystem" },
       filename: "remoteEntry.js",
       exposes: {
-        Text: "./src/text.ts",
+        CenteredContentWrapper: "./src/helpers/CenteredContentWrapper.tsx",
+        Title: "./src/components/Title.tsx",
+        Background: "./src/elements/Background.tsx",
+        Sections: "./src/components/Sections.tsx",
+        ScreenIcon: "./src/components/icons/ScreenIcon.tsx",
+        FlipchartIcon: "./src/components/icons/FlipchartIcon.tsx",
+        ShapesIcon: "./src/components/icons/ShapesIcon.tsx",
       },
-      shared: [],
+      shared: ["react", "react-dom"],
     }),
   ],
 };

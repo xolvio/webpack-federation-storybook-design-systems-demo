@@ -4,11 +4,12 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
     chunkFilename: "[id].[chunkhash].js",
+    publicPath: "http://localhost:3000/",
   },
   resolve: {
     extensions: [".jsx", ".js", ".json", ".ts", ".tsx"],
@@ -16,7 +17,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.[jt]sx?$/,
         loader: require.resolve("babel-loader"),
         options: {
           presets: [require.resolve("@babel/preset-react")],
@@ -30,12 +31,11 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "App",
+      name: "app",
       library: { type: "var", name: "app" },
       filename: "remoteEntry.js",
       remotes: {
-        audi_core_ui: "audi_core_ui",
-        xolviods: "xolviods",
+        xolvioDesignSystem: "xolvioDesignSystem",
       },
       shared: ["react", "react-dom"],
     }),

@@ -28,6 +28,8 @@ export const ShapesIcon = () => (
   </svg>
 );
 
+export default ShapesIcon;
+
 ShapesIcon.defaultProps = {
   "data-testid": "icon-shapes",
 };

@@ -1,7 +1,7 @@
 import React from "react";
 
 export const ScreenIcon = () => (
-  <svg width="100" height="100" viewBox="0 0 100 100" >
+  <svg width="100" height="100" viewBox="0 0 100 100">
     <title>Screen icon</title>
     <g fill="none" fillRule="evenodd">
       <path d="M0 0h100v100H0z" />
@@ -19,6 +19,8 @@ export const ScreenIcon = () => (
     </g>
   </svg>
 );
+
+export default ScreenIcon;
 
 ScreenIcon.defaultProps = {
   "data-testid": "icon-screen",

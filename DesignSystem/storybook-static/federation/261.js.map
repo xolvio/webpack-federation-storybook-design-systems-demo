@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://xolvio-storybook-showcase/./src/text.ts"],"names":["text"],"mappings":";;;;;;;;;;AAAA,iEAAe;AAAEA,MAAI,EAAE;AAAR,CAAf,E","file":"261.js","sourcesContent":["export default { text: \"this is my text\" };\n"],"sourceRoot":""}

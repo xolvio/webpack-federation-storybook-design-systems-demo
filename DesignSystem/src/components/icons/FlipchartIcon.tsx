@@ -1,7 +1,7 @@
 import React from "react";
 
 export const FlipchartIcon = () => (
-  <svg width="100" height="100" viewBox="0 0 100 100" >
+  <svg width="100" height="100" viewBox="0 0 100 100">
     <title>Flipchart icon</title>
     <g fill="none" fillRule="evenodd">
       <path d="M0 0h100v100H0z" />
@@ -28,6 +28,8 @@ export const FlipchartIcon = () => (
     </g>
   </svg>
 );
+
+export default FlipchartIcon;
 
 FlipchartIcon.defaultProps = {
   "data-testid": "icon-flipchart",

@@ -1,7 +1,7 @@
 import React from "react";
-import { ScreenIcon } from "../../../DesignSystem/src/components/icons/ScreenIcon";
-import { FlipchartIcon } from "../../../DesignSystem/src/components/icons/FlipchartIcon";
-import { ShapesIcon } from "../../../DesignSystem/src/components/icons/ShapesIcon";
+import { ScreenIcon } from "xolvioDesignSystem/ScreenIcon";
+import { FlipchartIcon } from "xolvioDesignSystem/FlipchartIcon";
+import { ShapesIcon } from "xolvioDesignSystem/ShapesIcon";
 
 const servicesDescriptions = [
   {

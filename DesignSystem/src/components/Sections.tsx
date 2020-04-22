@@ -23,6 +23,8 @@ export const Sections = ({ sections }: SectionsProps) => (
   </SectionsWrapper>
 );
 
+export default Sections;
+
 export const Section = (props: SectionProps) => (
   <ServiceSectionWrapper>
     <Anchor id={props.sectionId} />
@@ -45,8 +47,6 @@ export const Section = (props: SectionProps) => (
     </ServiceContentWrapper>
   </ServiceSectionWrapper>
 );
-
-export default Section;
 
 const SectionsWrapper = styled.div`
   flex-grow: 1;
