@@ -38,7 +38,6 @@
     "@storybook/react": "^5.3.18",
     "babel-loader": "8.1.0",
     "serve": "^11.3.0",
-    "webpack": "git://github.com/webpack/webpack.git#dev-1",
     "webpack-cli": "^3.3.11",
     "prettier": "2.0.4"
   }
