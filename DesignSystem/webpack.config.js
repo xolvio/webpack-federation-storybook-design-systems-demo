@@ -11,8 +11,7 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, "storybook-static/federation"),
-    publicPath: "http://localhost:3030/federation/",
+
   },
 
   resolve: {

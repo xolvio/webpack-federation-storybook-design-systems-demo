@@ -15,11 +15,9 @@
   },
   "scripts": {
     "start": "yarn storybook",
-    "build": "yarn build:storybook && yarn build:federation",
+    "build": "yarn build:storybook",
     "storybook": "start-storybook -p 9009 -s public",
-    "build:storybook": "build-storybook -s public",
-    "build:federation": "rm -rf storybook-static/federation && webpack --mode production",
-    "serve:federation": "serve storybook-static -p 3030"
+    "build:storybook": "build-storybook -s public"
   },
   "devDependencies": {
     "@babel/cli": "7.8.0",
