@@ -17,12 +17,14 @@
     "@babel/preset-env": "7.5.5",
     "@babel/preset-react": "^7.9.4",
     "@babel/preset-typescript": "7.8.0",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
     "babel-loader": "^8.1.0",
     "html-webpack-plugin": "4.2.0",
+    "prettier": "2.0.4",
     "serve": "^11.3.0",
     "webpack": "git://github.com/webpack/webpack.git#dev-1",
-    "webpack-cli": "^3.3.11",
-    "prettier": "2.0.4"
+    "webpack-cli": "^3.3.11"
   },
   "author": "",
   "license": "ISC"

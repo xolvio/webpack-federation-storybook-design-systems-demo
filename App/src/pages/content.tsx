@@ -1,7 +1,4 @@
-import React from "react";
-// import { ScreenIcon } from "xolvioDesignSystem/ScreenIcon";
-// import { FlipchartIcon } from "xolvioDesignSystem/FlipchartIcon";
-// import { ShapesIcon } from "xolvioDesignSystem/ShapesIcon";
+import * as React from "react";
 
 const ShapesIcon = () => <></>;
 const ScreenIcon = () => <></>;
