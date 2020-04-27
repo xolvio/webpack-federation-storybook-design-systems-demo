@@ -9,6 +9,17 @@ interface TitleProps {
     title: string;
 }
 
+
+const ConfettiWrapper = styled.div`
+  display: none;
+
+  @media ${device.tabletVertical} {
+    position: absolute;
+    transform: translate(calc(-100% - 24px), 64px);
+    display: block;
+  }
+`;
+
 export const Title = ({subheading, title}: TitleProps) => (
     <>
         <ConfettiWrapper>
@@ -25,15 +36,6 @@ export const Title = ({subheading, title}: TitleProps) => (
 );
 
 export default Title;
-const ConfettiWrapper = styled.div`
-  display: none;
-
-  @media ${device.tabletVertical} {
-    position: absolute;
-    transform: translate(calc(-100% - 24px), 64px);
-    display: block;
-  }
-`;
 const TitleWrapper = styled.div`
   padding: 0;
   display: flex;
