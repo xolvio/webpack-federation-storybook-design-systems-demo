@@ -15,7 +15,6 @@ type TextProps = {
 
 export const Header = styled.h1<TextProps>`
   width: 100%;
-  font-family: "HK Grotesk", Helvetica, sans-serif;
   font-weight: bold;
   letter-spacing: -0.6px;
   max-width: ${maxColumnWidth};
@@ -58,7 +57,6 @@ export const Subheading = styled(Header)`
 export const TextBody = styled.p<TextProps>`
   text-align: center;
   max-width: ${maxColumnWidth};
-  font-family: "HK Grotesk", Helvetica, sans-serif;
   font-size: ${(props) => props.fontSize || "18px"};
   line-height: 1.5;
   letter-spacing: -0.2px;
