@@ -1,0 +1,52 @@
+{
+  "name": "xolvio-storybook-showcase",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/styled-components": "^5.0.1",
+    "file-loader": "^6.0.0",
+    "glob": "^7.1.6",
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
+    "styled-components": "^5.1.0",
+    "typescript": "~3.7.2"
+  },
+  "scripts": {
+    "start": "yarn storybook",
+    "build": "yarn build:storybook && yarn build:federation",
+    "build:federation": "rm -rf storybook-static/federation && webpack --mode production",
+    "serve": "http-server ./storybook-static -p 3030 --cors",
+    "storybook": "start-storybook -p 9009 -s public,assets",
+    "build:storybook": "build-storybook -s public,assets"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.8.0",
+    "@babel/compat-data": "7.8.0",
+    "@babel/core": "7.7.4",
+    "@babel/plugin-proposal-class-properties": "7.8.0",
+    "@babel/plugin-proposal-numeric-separator": "7.8.0",
+    "@babel/preset-env": "7.5.5",
+    "@babel/preset-react": "7.8.0",
+    "@babel/preset-typescript": "7.8.0",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addon-storysource": "^5.3.18",
+    "@storybook/addon-viewport": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^5.3.18",
+    "babel-loader": "8.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "css-loader": "^3.5.3",
+    "http-server": "^0.12.3",
+    "prettier": "2.0.4",
+    "storybook-webpack-federation-plugin": "1.0.0",
+    "style-loader": "^1.2.0",
+    "webpack": "git://github.com/webpack/webpack.git#dev-1",
+    "webpack-cli": "^3.3.11"
+  }
+}
