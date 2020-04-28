@@ -9,14 +9,23 @@ import { FlipchartIcon } from "xolvioDesignSystem/icons/FlipchartIcon";
 const section = {
   heading: "Modernization",
   description:
-      "We can help you with your software delivery strategy to sustainably increase the productivity of your entire team and ensure you are continuously shipping valuable software to your customers.",
+    "We can help you with your software delivery strategy to sustainably increase the productivity of your entire team and ensure you are continuously shipping valuable software to your customers.",
   icon: <ShapesIcon />,
   onClick: () => console.log("clicked"),
   url: "/services/modernization",
   sectionId: "consulting",
-}
+};
 
-export const oneSection = () => <Section {...section} />;
+export const oneSection = () => (
+  <Section
+    heading={section.heading}
+    description={section.description}
+    icon={section.icon}
+    onClick={section.onClick}
+    url={section.url}
+    sectionId={section.sectionId}
+  />
+);
 
 const sectionDescriptions = [
   {
@@ -48,9 +57,8 @@ const sectionDescriptions = [
   },
 ];
 
-
 export const multipleSections = () => (
   <Sections sections={sectionDescriptions} />
 );
 
-export default { title: "Section" };
+export default { title: "Components/Section" };
