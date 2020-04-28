@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./typography.css"
 import { Services } from "./pages/Services";
 
 function App() {

@@ -1,12 +1,20 @@
 import * as React from "react";
 import { content } from "./content";
 
+const CenteredContentWrapper = React.lazy(() =>
+  import("xolvioDesignSystem/CenteredContentWrapper")
+);
+const Background = React.lazy(() => import("xolvioDesignSystem/Background"));
+const Title = React.lazy(() => import("xolvioDesignSystem/Title"));
+const Sections = React.lazy(() => import("xolvioDesignSystem/Sections"));
+
+
 export const Services = () => (
-  <div>
-    <h1>{content.subheading}</h1>
-    <h2>{content.title}</h2>
-    {content.sections.map((s) => (
-      <div>{JSON.stringify(s)}</div>
-    ))}
-  </div>
+    <React.Suspense fallback={"Loading Components from the Design System"}>
+        <CenteredContentWrapper>
+            <Background/>
+            <Title subheading={content.subheading} title={content.title}/>
+            <Sections sections={content.sections}/>
+        </CenteredContentWrapper>
+    </React.Suspense>
 );

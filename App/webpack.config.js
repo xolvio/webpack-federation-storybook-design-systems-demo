@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const path = require("path");
 
 module.exports = {
@@ -23,11 +23,33 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ["file-loader"],
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/",
+            },
+          },
+        ],
+      },
+      {
+        test: /\.css$/i,
+        use: ["css-loader"],
       },
     ],
   },
   plugins: [
+    new ModuleFederationPlugin({
+      name: "app",
+      library: { type: "var", name: "app" },
+      filename: "remoteEntry.js",
+      remotes: {
+        xolvioDesignSystem: "xolvioDesignSystem",
+      },
+      shared: ["react", "react-dom"],
+    }),
+
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
