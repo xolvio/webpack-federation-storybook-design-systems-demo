@@ -1,10 +1,22 @@
 import React from "react";
 import "../index.css";
-import { Section, Sections } from "./Sections";
-import { ShapesIcon } from "./icons/ShapesIcon";
-import { ScreenIcon } from "./icons/ScreenIcon";
-import { FlipchartIcon } from "./icons/FlipchartIcon";
-export default { title: "Section" };
+
+import { Section, Sections } from "xolvioDesignSystem/components/Sections";
+import { ShapesIcon } from "xolvioDesignSystem/icons/ShapesIcon";
+import { ScreenIcon } from "xolvioDesignSystem/icons/ScreenIcon";
+import { FlipchartIcon } from "xolvioDesignSystem/icons/FlipchartIcon";
+
+const section = {
+  heading: "Modernization",
+  description:
+      "We can help you with your software delivery strategy to sustainably increase the productivity of your entire team and ensure you are continuously shipping valuable software to your customers.",
+  icon: <ShapesIcon />,
+  onClick: () => console.log("clicked"),
+  url: "/services/modernization",
+  sectionId: "consulting",
+}
+
+export const oneSection = () => <Section {...section} />;
 
 const sectionDescriptions = [
   {
@@ -36,8 +48,9 @@ const sectionDescriptions = [
   },
 ];
 
-export const oneSection = () => <Section {...sectionDescriptions[0]} />;
 
 export const multipleSections = () => (
   <Sections sections={sectionDescriptions} />
 );
+
+export default { title: "Section" };

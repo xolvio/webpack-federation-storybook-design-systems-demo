@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const {StorybookWebpackFederationPlugin} = require("storybook-webpack-federation-plugin")
+
 const path = require("path");
 
 module.exports = {
@@ -35,21 +36,14 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["css-loader"],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
   plugins: [
-    new ModuleFederationPlugin({
-      name: "app",
-      library: { type: "var", name: "app" },
-      filename: "remoteEntry.js",
-      remotes: {
-        xolvioDesignSystem: "xolvioDesignSystem",
-      },
-      shared: ["react", "react-dom"],
+    new StorybookWebpackFederationPlugin({
+      remotes: ["xolvioDesignSystem"],
     }),
-
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),

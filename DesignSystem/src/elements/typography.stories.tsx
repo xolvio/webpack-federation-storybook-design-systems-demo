@@ -1,13 +1,12 @@
 import React from "react";
 
-// import "../index.css";
 import {
   Header,
   SectionHeader,
   SectionHeaderSmall,
   Subheading,
   TextBody,
-} from "./typography";
+} from "xolvioDesignSystem/elements/typography";
 
 export default { title: "Elements/Typography" };
 

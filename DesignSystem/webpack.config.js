@@ -1,5 +1,5 @@
 const path = require("path");
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const {StorybookWebpackFederationPlugin} = require("storybook-webpack-federation-plugin")
 
 module.exports = {
   cache: false,
@@ -28,30 +28,29 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ["file-loader"],
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/",
+            },
+          },
+        ],
       },
       {
         test: /\.css$/i,
-        use: ["css-loader"],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
 
   plugins: [
-    new ModuleFederationPlugin({
+    new StorybookWebpackFederationPlugin({
       name: "xolvioDesignSystem",
-      library: { type: "var", name: "xolvioDesignSystem" },
-      filename: "remoteEntry.js",
-      exposes: {
-        CenteredContentWrapper: "./src/helpers/CenteredContentWrapper.tsx",
-        Title: "./src/components/Title.tsx",
-        Background: "./src/elements/Background.tsx",
-        Sections: "./src/components/Sections.tsx",
-        ScreenIcon: "./src/components/icons/ScreenIcon.tsx",
-        FlipchartIcon: "./src/components/icons/FlipchartIcon.tsx",
-        ShapesIcon: "./src/components/icons/ShapesIcon.tsx",
-      },
-      shared: ["react", "react-dom"],
+      files: {
+        paths: ["./src/**/*.ts{,x}"],
+      }
     }),
   ],
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { Title } from "./Title";
+import { Title } from "xolvioDesignSystem/components/Title";
 import { CenteredContentWrapper } from "../helpers/CenteredContentWrapper";
 import { Background } from "../elements/Background";
 import "../index.css";

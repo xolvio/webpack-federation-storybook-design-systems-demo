@@ -4,5 +4,12 @@ module.exports = {
     "@babel/preset-react",
     "@babel/preset-typescript"
   ],
-  plugins: [],
+  plugins: [
+    ["module-resolver", {
+      "root": ["."],
+      "alias": {
+        "xolvioDesignSystem": "./src/",
+      }
+    }]
+  ],
 };

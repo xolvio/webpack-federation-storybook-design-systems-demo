@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../index.css";
-import {ButtonInline } from "./InlineButton";
+import { ButtonInline } from "xolvioDesignSystem/elements/InlineButton";
 
 export default { title: "Elements/Button Inline" };
 

@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "HK Grotesk";
+    src: url("../../assets/fonts/HKGrotesk-Light.otf");
+    src: url("../../assets/fonts/HKGrotesk-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: "HK Grotesk";
+    font-weight: bold;
+    src: url("../../assets/fonts/HKGrotesk-Bold.otf");
+    src: url("../../assets/fonts/HKGrotesk-Bold.otf") format("opentype");
+}
+
+* {
+    font-family: "HK Grotesk", Arial, Helvetica, sans-serif;
+}
