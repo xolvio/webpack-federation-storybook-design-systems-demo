@@ -1,5 +1,4 @@
 const path = require("path");
-const {StorybookWebpackFederationPlugin} = require("storybook-webpack-federation-plugin")
 
 module.exports = {
   cache: false,
@@ -9,11 +8,6 @@ module.exports = {
 
   optimization: {
     minimize: false,
-  },
-
-  output: {
-    path: path.resolve(__dirname, "storybook-static/federation"),
-    publicPath: "http://localhost:3030/federation/",
   },
 
   resolve: {
@@ -45,12 +39,10 @@ module.exports = {
     ],
   },
 
+  output: {
+  },
+
   plugins: [
-    new StorybookWebpackFederationPlugin({
-      name: "xolvioDesignSystem",
-      files: {
-        paths: ["./src/**/*.ts{,x}"],
-      }
-    }),
+
   ],
 };

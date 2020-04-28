@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const {StorybookWebpackFederationPlugin} = require("storybook-webpack-federation-plugin")
 
 const path = require("path");
 
@@ -41,9 +40,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new StorybookWebpackFederationPlugin({
-      remotes: ["xolvioDesignSystem"],
-    }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
