@@ -11,9 +11,6 @@ const section = {
   description:
     "We can help you with your software delivery strategy to sustainably increase the productivity of your entire team and ensure you are continuously shipping valuable software to your customers.",
   icon: <ShapesIcon />,
-  onClick: () => console.log("clicked"),
-  url: "/services/modernization",
-  sectionId: "consulting",
 };
 
 export const oneSection = () => (
@@ -21,9 +18,6 @@ export const oneSection = () => (
     heading={section.heading}
     description={section.description}
     icon={section.icon}
-    onClick={section.onClick}
-    url={section.url}
-    sectionId={section.sectionId}
   />
 );
 
@@ -33,27 +27,18 @@ const sectionDescriptions = [
     description:
       "We can help you with your software delivery strategy to sustainably increase the productivity of your entire team and ensure you are continuously shipping valuable software to your customers.",
     icon: <ShapesIcon />,
-    onClick: () => console.log("clicked"),
-    url: "/services/modernization",
-    sectionId: "consulting",
   },
   {
     heading: "Bespoke development",
     description:
-      "We help to transform systems, modernize solutions and renovate development ecosystem.",
+      "We help to transform systems, modernize solutions and renovate development ecosystems.",
     icon: <ScreenIcon />,
-    onClick: () => console.log("clicked"),
-    url: "/services/development",
-    sectionId: "development",
   },
   {
     heading: "Training",
     description:
       "Prepare your team and product for success. Team or 1-1 tuition on all aspects of test automation.",
     icon: <FlipchartIcon />,
-    onClick: () => console.log("clicked"),
-    url: "/services/training",
-    sectionId: "training",
   },
 ];
 
