@@ -1,9 +1,8 @@
 import React from "react";
-import { Title } from "xolvioDesignSystem/components/Title";
-import { CenteredContentWrapper } from "xolvioDesignSystem/helpers/CenteredContentWrapper";
-import { Background } from "xolvioDesignSystem/elements/Background";
+import { Title } from "xolvio_ui/components/Title";
+import { CenteredContentWrapper } from "xolvio_ui/helpers/CenteredContentWrapper";
+import { Background } from "xolvio_ui/elements/Background";
 import "../index.css";
-
 
 const defaultTitle = "Let us up your game";
 const defaultSubheading = "Services";

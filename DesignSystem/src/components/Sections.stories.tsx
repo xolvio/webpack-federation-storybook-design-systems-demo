@@ -1,10 +1,10 @@
 import React from "react";
 import "../index.css";
 
-import { Section, Sections } from "xolvioDesignSystem/components/Sections";
-import { ShapesIcon } from "xolvioDesignSystem/icons/ShapesIcon";
-import { ScreenIcon } from "xolvioDesignSystem/icons/ScreenIcon";
-import { FlipchartIcon } from "xolvioDesignSystem/icons/FlipchartIcon";
+import { Section, Sections } from "xolvio_ui/components/Sections";
+import { ShapesIcon } from "xolvio_ui/icons/ShapesIcon";
+import { ScreenIcon } from "xolvio_ui/icons/ScreenIcon";
+import { FlipchartIcon } from "xolvio_ui/icons/FlipchartIcon";
 
 const section = {
   heading: "Modernization",

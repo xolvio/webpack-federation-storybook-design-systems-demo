@@ -28,7 +28,7 @@
     "storybook-webpack-federation-plugin": "^1.0.0",
     "style-loader": "^1.2.0",
     "typescript": "~3.7.2",
-    "webpack": "^4.43.0",
+    "webpack": "git://github.com/webpack/webpack.git#dev-1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
