@@ -17,8 +17,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 9009 -s public,assets",
-    "build": "yarn build:storybook && yarn build:federation",
-    "build:federation": "rm -rf storybook-static/federation && webpack --mode production",
+    "build": "yarn build:storybook",
     "serve": "http-server ./storybook-static -p 3030 --cors",
     "build:storybook": "build-storybook -s public,assets"
   },
