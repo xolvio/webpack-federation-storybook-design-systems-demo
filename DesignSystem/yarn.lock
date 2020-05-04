@@ -8131,7 +8131,7 @@ store2@^2.7.1:
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.11.1.tgz#118645f1b5e38d20604852362183955e360a5893"
   integrity sha512-llZqXAXjG2E4FvWsZxFmBDfh6kqQuGFZm64TX23qW02Hf4dyElhDEbYx1IIVTEMKWrrDnDA9oqOjY8WHo2NgcA==
 
-storybook-webpack-federation-plugin@^1.0.0:
+storybook-webpack-federation-plugin@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/storybook-webpack-federation-plugin/-/storybook-webpack-federation-plugin-1.0.1.tgz#94dabbd4228f86f0d825a621b165cf5fb50c0311"
   integrity sha512-MHfk840SyZHLe8j1HqN6e0qYGxC/StcGfkBQGoyYQRERhkSoLod8MbUQC6IazrmeNy42yFE3W7PUjPrTLUZaKg==

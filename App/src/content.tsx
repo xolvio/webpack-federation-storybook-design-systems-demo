@@ -1,3 +1,5 @@
+import * as React from "react";
+
 export const content = {
   title: "Let us up your game",
   subheading: "SERVICES",
