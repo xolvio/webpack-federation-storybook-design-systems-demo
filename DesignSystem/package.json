@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "start-storybook -p 9009 -s public,assets",
-    "build": "yarn build:storybook",
+    "build": "yarn build:storybook && yarn build:federation",
+    "build:federation": "rm -rf storybook-static/federation && webpack --mode production",
     "serve": "http-server ./storybook-static -p 3030 --cors",
     "build:storybook": "build-storybook -s public,assets",
     "snapshot": "yarn build:storybook && percy-storybook --widths=320,1280"
@@ -43,7 +44,9 @@
     "css-loader": "^3.5.3",
     "http-server": "^0.12.3",
     "prettier": "2.0.4",
+    "storybook-webpack-federation-plugin": "^1.0.1",
     "style-loader": "^1.2.0",
+    "webpack": "git://github.com/webpack/webpack.git#dev-1",
     "webpack-cli": "^3.3.11"
   }
 }
