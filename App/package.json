@@ -25,6 +25,7 @@
     "html-webpack-plugin": "4.2.0",
     "http-server": "^0.12.3",
     "prettier": "2.0.4",
+    "storybook-webpack-federation-plugin": "^1.0.1",
     "style-loader": "^1.2.0",
     "typescript": "~3.7.2",
     "webpack": "git://github.com/webpack/webpack.git#dev-1",
