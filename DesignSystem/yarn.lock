@@ -5614,10 +5614,18 @@ jest-get-type@^24.9.0:
   resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-24.9.0.tgz#1684a0c8a50f2e4901b6644ae861f579eed2ef0e"
   integrity sha512-lUseMzAley4LhIcpSP9Jf+fTrQ4a1yHQwLNeeVa2cEmbCGeoZAtYPOIv8JaxLD/sUpKxetKGP+gsHl8f8TSj8Q==
 
-jest-worker@^25.1.0, jest-worker@^25.4.0:
+jest-worker@^25.1.0:
   version "25.4.0"
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-25.4.0.tgz#ee0e2ceee5a36ecddf5172d6d7e0ab00df157384"
   integrity sha512-ghAs/1FtfYpMmYQ0AHqxV62XPvKdUDIBBApMZfly+E9JEmYh2K45G0R5dWxx986RN12pRCxsViwQVtGl+N4whw==
+  dependencies:
+    merge-stream "^2.0.0"
+    supports-color "^7.0.0"
+
+jest-worker@^25.4.0:
+  version "25.5.0"
+  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-25.5.0.tgz#2611d071b79cea0f43ee57a3d118593ac1547db1"
+  integrity sha512-/dsSmUkIy5EBGfv/IjjqmFxrNAUpBERfGs1oHROyD7yxjG/w+t0GOJDX8O1k32ySmd7+a5IhnJU2qQFcJ4n1vw==
   dependencies:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
@@ -8123,10 +8131,10 @@ store2@^2.7.1:
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.11.1.tgz#118645f1b5e38d20604852362183955e360a5893"
   integrity sha512-llZqXAXjG2E4FvWsZxFmBDfh6kqQuGFZm64TX23qW02Hf4dyElhDEbYx1IIVTEMKWrrDnDA9oqOjY8WHo2NgcA==
 
-storybook-webpack-federation-plugin@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/storybook-webpack-federation-plugin/-/storybook-webpack-federation-plugin-1.0.0.tgz#db1e182322dd87053ff91cfc1936801db550770d"
-  integrity sha512-smv7HyX0wh9NCTZC5Zx5KWmGnDV82iq2NEKoaZ3EFa1Zxo3gTKCwyGHyumr8dQSPZ/m4e/XUcN7jPT1gCb0ecQ==
+storybook-webpack-federation-plugin@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/storybook-webpack-federation-plugin/-/storybook-webpack-federation-plugin-1.0.1.tgz#94dabbd4228f86f0d825a621b165cf5fb50c0311"
+  integrity sha512-MHfk840SyZHLe8j1HqN6e0qYGxC/StcGfkBQGoyYQRERhkSoLod8MbUQC6IazrmeNy42yFE3W7PUjPrTLUZaKg==
   dependencies:
     glob "^7.1.6"
 
@@ -8472,7 +8480,7 @@ terser-webpack-plugin@^2.1.2:
     terser "^4.4.3"
     webpack-sources "^1.4.3"
 
-terser-webpack-plugin@^2.3.1:
+terser-webpack-plugin@^2.3.6:
   version "2.3.6"
   resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-2.3.6.tgz#a4014b311a61f87c6a1b217ef4f5a75bd0665a69"
   integrity sha512-I8IDsQwZrqjdmOicNeE8L/MhwatAap3mUrtcAKJuilsemUNcX+Hier/eAzwStVqhlCxq0aG3ni9bK/0BESXkTg==
@@ -8497,9 +8505,9 @@ terser@^4.1.2, terser@^4.4.3, terser@^4.6.3:
     source-map-support "~0.5.12"
 
 terser@^4.6.12:
-  version "4.6.12"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-4.6.12.tgz#44b98aef8703fdb09a3491bf79b43faffc5b4fee"
-  integrity sha512-fnIwuaKjFPANG6MAixC/k1TDtnl1YlPLUlLVIxxGZUn1gfUx2+l3/zGNB72wya+lgsb50QBi2tUV75RiODwnww==
+  version "4.6.13"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-4.6.13.tgz#e879a7364a5e0db52ba4891ecde007422c56a916"
+  integrity sha512-wMvqukYgVpQlymbnNbabVZbtM6PN63AzqexpwJL8tbh/mRT9LE5o+ruVduAGL7D6Fpjl+Q+06U5I9Ul82odAhw==
   dependencies:
     commander "^2.20.0"
     source-map "~0.6.1"
@@ -8995,7 +9003,7 @@ webpack@^4.33.0, webpack@^4.38.0:
 
 "webpack@git://github.com/webpack/webpack.git#dev-1":
   version "5.0.0-beta.15"
-  resolved "git://github.com/webpack/webpack.git#5887c20ab075b9765f1d11abd142e848d35995ae"
+  resolved "git://github.com/webpack/webpack.git#083eb02f2e7dda525263539af84fb4255618c931"
   dependencies:
     "@webassemblyjs/ast" "1.9.0"
     "@webassemblyjs/helper-module-context" "1.9.0"
@@ -9016,7 +9024,7 @@ webpack@^4.33.0, webpack@^4.38.0:
     pkg-dir "^4.2.0"
     schema-utils "^2.5.0"
     tapable "2.0.0-beta.9"
-    terser-webpack-plugin "^2.3.1"
+    terser-webpack-plugin "^2.3.6"
     watchpack "2.0.0-beta.13"
     webpack-sources "2.0.0-beta.8"
 

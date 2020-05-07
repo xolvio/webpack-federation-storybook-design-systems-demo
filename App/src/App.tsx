@@ -1,8 +1,7 @@
 import * as React from "react";
-import { Services } from "./pages/Services";
 
 function App() {
-  return <Services />;
+  return <div>This is my React App!</div>;
 }
 
 export default App;

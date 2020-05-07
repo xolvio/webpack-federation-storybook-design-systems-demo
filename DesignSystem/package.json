@@ -1,7 +1,6 @@
 {
   "name": "xolvio-storybook-showcase",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
@@ -16,11 +15,9 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "yarn storybook",
-    "build": "yarn build:storybook && yarn build:federation",
-    "build:federation": "rm -rf storybook-static/federation && webpack --mode production",
+    "start": "start-storybook -p 9009 -s public,assets",
+    "build": "yarn build:storybook",
     "serve": "http-server ./storybook-static -p 3030 --cors",
-    "storybook": "start-storybook -p 9009 -s public,assets",
     "build:storybook": "build-storybook -s public,assets"
   },
   "devDependencies": {
@@ -44,9 +41,7 @@
     "css-loader": "^3.5.3",
     "http-server": "^0.12.3",
     "prettier": "2.0.4",
-    "storybook-webpack-federation-plugin": "1.0.0",
     "style-loader": "^1.2.0",
-    "webpack": "git://github.com/webpack/webpack.git#dev-1",
     "webpack-cli": "^3.3.11"
   }
 }

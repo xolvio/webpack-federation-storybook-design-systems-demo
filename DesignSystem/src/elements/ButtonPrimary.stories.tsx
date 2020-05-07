@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../index.css";
-import { ButtonPrimary } from "xolvioDesignSystem/elements/ButtonPrimary";
+import { ButtonPrimary } from "xolvio_ui/elements/ButtonPrimary";
 
 export default { title: "Elements/Button Primary" };
 
