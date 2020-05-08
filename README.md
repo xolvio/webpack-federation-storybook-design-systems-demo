@@ -1,4 +1,6 @@
-# The Example for the storybook-webpack-federation-plugin
+# Storybook Design Systems Article Example App And Design System
+
+![Cover image](/webpack-federation.png "Cover image")
 
 [Read the article here](https://medium.com/qualityfaster/federated-design-systems-with-storybook-8a2e4f1a7108?source=friends_link&sk=a85fde002b7b19eb50f8f80b91193372)
 
