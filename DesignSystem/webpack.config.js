@@ -46,7 +46,7 @@ module.exports = {
     // location of where the compiled Storybook lives
     path: path.resolve(__dirname, "storybook-static/federation"),
     // the url where Storybook will be accessible from
-    publicPath: "//localhost:3030/federation/",
+    publicPath: "//lab.xolv.io/federated-design-system/xolvio-ui/federation/",
   },
 
   plugins: [

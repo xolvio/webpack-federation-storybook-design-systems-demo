@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import "./typography.css"
+// import "./typography.css"
 import { device } from "../helpers/device";
 import { TextBlack, AcceptanceGreen, TextMedium } from "../helpers/colors";
 
