@@ -1,13 +1,14 @@
-const getAutomaticallyDeployedURL = () => {
-  const branchName = Cypress.env("GITHUB_REF").replace("refs/heads/", "")
-  return `https://xolvio-ui.s3.amazonaws.com/${branchName}/App/index.html`
-}
+// const getAutomaticallyDeployedURL = () => {
+//   const branchName = Cypress.env("GITHUB_REF").replace("refs/heads/", "")
+//   return `https://xolvio-ui.s3.amazonaws.com/${branchName}/App/index.html`
+// }
 
 context('Smoke test', () => {
   beforeEach(() => {
-    const path = getAutomaticallyDeployedURL()
-    console.log("GOZDECKI path", path)
-    cy.visit(getAutomaticallyDeployedURL())
+    // const path = getAutomaticallyDeployedURL()
+    // console.log("GOZDECKI path", path)
+    cy.visit( `https://xolvio-ui.s3.amazonaws.com/training-demo/App/index.html`)
+    // cy.visit(getAutomaticallyDeployedURL())
   })
 
   it('The app shows up', () => {

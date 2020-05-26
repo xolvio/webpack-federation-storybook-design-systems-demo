@@ -22,6 +22,5 @@ jobs:
         run: node ./scripts/deploy-to-s3.js
       - uses: cypress-io/github-action@v1
         with:
-          env: CYPRESS_GITHUB_REF=${{ GITHUB_REF }}
           browser: chrome
           headless: true
