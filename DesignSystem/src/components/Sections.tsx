@@ -7,6 +7,7 @@ export type SectionProps = {
   heading: string;
   description: string;
   icon: React.ReactNode;
+  ctaCallback?: () => void
 };
 type SectionsProps = {
   sections: SectionProps[];
