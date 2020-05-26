@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-16.04
     steps:
       - uses: actions/checkout@v2
-      - run: npm run install:all
+      - run: npm run install
       - name: Upload snapshots to percy
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

@@ -1,5 +1,9 @@
 {
   "scripts": {
+    "postinstall": "yarn install:all",
     "install:all": "cd App && yarn && cd ../DesignSystem && yarn"
+  },
+  "dependencies": {
+    "@auth0/s3": "^1.0.0"
   }
 }
