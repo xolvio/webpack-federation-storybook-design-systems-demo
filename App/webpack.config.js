@@ -61,5 +61,8 @@ module.exports = {
     new StorybookWebpackFederationPlugin({
       remotes: ["xolvio_ui"],
     }),
+    new StorybookWebpackFederationPlugin({
+      remotes: ["xolvio_ui"],
+    }),
   ],
 };
