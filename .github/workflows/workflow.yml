@@ -11,11 +11,11 @@ jobs:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         run: cd DesignSystem && yarn snapshot
       - name: build DesignSystem Federation
-        run: yarn build:federation
+        run: cd DesignSystem && yarn build:federation
       - name: build App
-        run: cd ../App && yarn build
+        run: cd App && yarn build
       - name: deploy to s3
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: cd ../ && node ./scripts/deploy-to-s3.js
+        run: node ./scripts/deploy-to-s3.js
