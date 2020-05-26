@@ -10,3 +10,7 @@ jobs:
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         run: cd DesignSystem && yarn snapshot
+      - name: build DesignSystem Federation
+        run: yarn build:federation
+      - name: build App
+        run: cd ../App && yarn build
