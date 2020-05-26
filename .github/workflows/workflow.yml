@@ -3,6 +3,7 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-16.04
+    container: cypress/browsers:node12.13.0-chrome78-ff70
     steps:
       - uses: actions/checkout@v2
       - run: yarn
@@ -19,3 +20,8 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: node ./scripts/deploy-to-s3.js
+      - uses: cypress-io/github-action@v1
+        with:
+          env: CYPRESS_GITHUB_REF=${{ $GITHUB_REF }}
+          browser: chrome
+          headless: true
