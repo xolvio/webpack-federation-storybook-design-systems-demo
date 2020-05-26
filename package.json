@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "install:all": "cd App && yarn && cd ../DesignSystem && yarn"
+  }
+}
