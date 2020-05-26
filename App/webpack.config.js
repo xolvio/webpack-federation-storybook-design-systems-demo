@@ -5,6 +5,17 @@ const {
 
 const path = require("path");
 
+const isLocalFederation = process.env.LOCAL_FEDERATION === "true";
+
+const getAutomaticallyDeployedPath = () => {
+  const branchName = process.env.GITHUB_REF.replace("refs/heads/", "")
+  return `https://xolvio-ui.s3.amazonaws.com/${branchName}/DesignSystem/federation/`
+}
+
+const localLink = {designSystem: "http://localhost:3030/federation/"}
+const remoteLink = {designSystem : getAutomaticallyDeployedPath()}
+
+
 module.exports = {
   entry: "./src/index",
   output: {
@@ -45,6 +56,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+      ...(isLocalFederation ? localLink : remoteLink)
     }),
     new StorybookWebpackFederationPlugin({
       remotes: ["xolvio_ui"],

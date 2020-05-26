@@ -3,6 +3,13 @@ const {
   StorybookWebpackFederationPlugin,
 } = require("storybook-webpack-federation-plugin");
 
+const isLocalFederation = process.env.LOCAL_FEDERATION === "true";
+
+const getAutomaticallyDeployedPath = () => {
+  const branchName = process.env.GITHUB_REF.replace("refs/heads/", "")
+  return `https://xolvio-ui.s3.amazonaws.com/${branchName}/DesignSystem/federation/`
+}
+
 module.exports = {
   cache: false,
 
@@ -46,7 +53,7 @@ module.exports = {
     // location of where the compiled Storybook lives
     path: path.resolve(__dirname, "storybook-static/federation"),
     // the url where Storybook will be accessible from
-    publicPath: "//localhost:3030/federation/",
+    publicPath: isLocalFederation ? "//localhost:3030/federation/" : getAutomaticallyDeployedPath(),
   },
 
   plugins: [
