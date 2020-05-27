@@ -7,5 +7,6 @@
     "@auth0/s3": "^1.0.0"
   },
   "devDependencies": {
+    "cypress": "^4.7.0"
   }
 }
