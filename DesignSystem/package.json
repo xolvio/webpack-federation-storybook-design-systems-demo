@@ -46,5 +46,10 @@
     "style-loader": "^1.2.0",
     "webpack": "v5.0.0-beta.16",
     "webpack-cli": "^3.3.11"
+  },
+  "workspaces": {
+    "nohoist": [
+      "webpack"
+    ]
   }
 }
