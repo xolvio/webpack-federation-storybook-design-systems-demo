@@ -1,4 +1,4 @@
-const initialSectionsData = require('../section/20200513164925-dummy-data')
+const initialSectionsData = require('../../../Section/migrations/section/20200513164925-dummy-data')
 
 module.exports.description = '<Put your description here>';
 

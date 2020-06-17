@@ -1,7 +1,7 @@
 import React from "react";
-import "../index.css";
+import "../../index.css";
 
-import { Section, Sections } from "xolvio_ui/components/Sections";
+import { Section, Sections } from "xolvio_ui/components/Sections/Sections";
 import { ShapesIcon } from "xolvio_ui/icons/ShapesIcon";
 import { ScreenIcon } from "xolvio_ui/icons/ScreenIcon";
 import { FlipchartIcon } from "xolvio_ui/icons/FlipchartIcon";

@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { device } from "../helpers/device";
-import { SectionHeaderSmall, TextBody } from "../elements/typography";
+import { device } from "../../helpers/device";
+import { SectionHeaderSmall, TextBody } from "../../elements/typography";
 import React from "react";
-import { iconsMap } from "../icons/IconsMap";
+import { iconsMap } from "../../icons/IconsMap";
 export type SectionProps = {
   heading: string;
   description: string;

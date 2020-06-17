@@ -1,8 +1,8 @@
 import React from "react";
-import {Confetti7Rows} from "../elements/Confetti7Rows";
-import {SectionHeader, Subheading} from "../elements/typography";
+import {Confetti7Rows} from "../../elements/Confetti7Rows";
+import {SectionHeader, Subheading} from "../../elements/typography";
 import styled from "styled-components";
-import {device} from "../helpers/device";
+import {device} from "../../helpers/device";
 
 interface TitleProps {
     subheading: string;

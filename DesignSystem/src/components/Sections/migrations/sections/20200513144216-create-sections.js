@@ -1,4 +1,4 @@
-const singleSectionInitialMigration = require('../section/20200513162610-create-section');
+const singleSectionInitialMigration = require('../../../Section/migrations/section/20200513162610-create-section');
 
 module.exports.description = "Create content model for Sections";
 
