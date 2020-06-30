@@ -42,9 +42,9 @@
     "css-loader": "^3.5.3",
     "http-server": "^0.12.3",
     "prettier": "2.0.4",
-    "storybook-webpack-federation-plugin": "^1.0.1",
+    "storybook-webpack-federation-plugin": "2.0.1",
     "style-loader": "^1.2.0",
-    "webpack": "v5.0.0-beta.16",
+    "webpack": "5.0.0-beta.20",
     "webpack-cli": "^3.3.11"
   }
 }
